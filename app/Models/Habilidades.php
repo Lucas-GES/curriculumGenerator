@@ -9,6 +9,12 @@ class Habilidades extends Model
 {
     use HasFactory;
 
+    protected $table = 'habilidades';
+
+    protected $fillable = [
+        'descricao'
+    ];
+
     public function curriculum()
     {
         return $this->belongsTo(Curriculum::class);

@@ -3,7 +3,7 @@
         @csrf
         {{-- Principais informações --}}
         <div class="text-center mb-6">
-            <button class="bg-blue-500 w-48 h-12 rounded" type="button"
+            <button class="bg-blue-500 w-full h-12 rounded text-white font-bold" type="button"
                 @click="principaisInformacoes = !principaisInformacoes">Principais Informações</button>
         </div>
         <div :class="{ 'hidden': !principaisInformacoes }">
@@ -61,7 +61,7 @@
 
         {{-- Formação acadêmica --}}
         <div class="text-center mt-6">
-            <button class="bg-blue-500 w-48 h-12 rounded" type="button" @click="formacao = !formacao">Formação
+            <button class="bg-blue-500 w-full h-12 rounded text-white font-bold" type="button" @click="formacao = !formacao">Formação
                 Acadêmica</button>
         </div>
         <div :class="{ 'hidden': !formacao }">
@@ -101,7 +101,7 @@
 
         {{-- Formação Complementar --}}
         <div class="text-center mt-6">
-            <button class="bg-blue-500 w-48 h-12 rounded" type="button" @click="formacaoComplementar = !formacaoComplementar">Formação
+            <button class="bg-blue-500 w-full h-12 rounded text-white font-bold" type="button" @click="formacaoComplementar = !formacaoComplementar">Formação
                 Complementar</button>
         </div>
         <div :class="{ 'hidden': !formacaoComplementar }">
@@ -151,7 +151,7 @@
 
         {{-- Experiência --}}
         <div class="text-center mt-6">
-            <button class="bg-blue-500 w-48 h-12 rounded" type="button" @click="experiencia = !experiencia">Experiência</button>
+            <button class="bg-blue-500 w-full h-12 rounded text-white font-bold" type="button" @click="experiencia = !experiencia">Experiência</button>
         </div>
         <div :class="{ 'hidden': !experiencia }">
 
@@ -218,7 +218,7 @@
 
         {{-- Habilidades --}}
         <div class="text-center mt-6">
-            <button class="bg-blue-500 w-48 h-12 rounded" type="button" @click="habilidades = !habilidades">Habilidades</button>
+            <button class="bg-blue-500 w-full h-12 rounded text-white font-bold" type="button" @click="habilidades = !habilidades">Habilidades</button>
         </div>
         <div :class="{ 'hidden': !habilidades }">
             @foreach ($habilidades as $index => $form)

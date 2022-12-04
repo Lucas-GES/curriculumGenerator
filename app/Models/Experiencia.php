@@ -9,6 +9,16 @@ class Experiencia extends Model
 {
     use HasFactory;
 
+    protected $table = 'experiencias';
+
+    protected $fillable = [
+        'nome',
+        'cargo',
+        'inicioContrato',
+        'fimContrato',
+        'descricao'
+    ];
+
     public function curriculum()
     {
         return $this->belongsTo(Curriculum::class);

@@ -9,6 +9,13 @@ class Formacao extends Model
 {
     use HasFactory;
 
+    protected $table = 'formacaos';
+
+    protected $fillable = [
+        'nome',
+        'descricao'
+    ];
+
     public function curriculum()
     {
         return $this->belongsTo(Curriculum::class);
