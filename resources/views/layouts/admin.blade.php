@@ -43,6 +43,9 @@
                 <x-side-nav-link href="{{ route('home')}}" :active="request()->routeIs('dashboard')">
                     Home
                 </x-side-nav-link>
+                <x-side-nav-link href="{{ route('curriculums.index')}}" :active="request()->routeIs('dashboard')">
+                    Todos os Curriculums
+                </x-side-nav-link>
                 <x-side-nav-link href="{{ route('curriculums.create')}}" :active="request()->routeIs('dashboard')">
                     Novo Curriculum
                 </x-side-nav-link>

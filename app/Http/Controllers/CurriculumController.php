@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Curriculum;
+use App\Models\Experiencia;
+use App\Models\Formacao;
+use App\Models\FormacaoComplementar;
+use App\Models\Habilidades;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,7 +15,6 @@ class CurriculumController extends Controller
     public function index()
     {
         $curriculums = Curriculum::all();
-        dd($curriculums);
         return view('curriculums.index')->with('curriculums', $curriculums);
     }
 
@@ -72,14 +75,14 @@ class CurriculumController extends Controller
         redirect()->route('curriculums.index');
     }
 
-    public function show()
+    public function show(Curriculum $curriculum)
     {
-
+        return view('curriculums.show')->with('curriculum', $curriculum);
     }
 
-    public function edit()
+    public function edit(Curriculum $curriculum)
     {
-
+         return view('curriculums.edit')->with('curriculum', $curriculum);
     }
 
     public function update()
